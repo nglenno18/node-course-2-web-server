@@ -72,6 +72,15 @@ app.get('/about', function(req, res){
   });
 });
 
+app.get('/projects', function(re, res){
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMessage:'This is the last challenge of Section 5'
+  });
+});
+
+
+
 /*
 CHALLENGE: Create a route to /bad --> send back json with an errorMessage
 */
@@ -95,3 +104,13 @@ console.log('check the client');
     // so it runs the start script from package.json
     //--> we run app using start script from terminal
     //-- npm start
+// Once we change the package.json, and this file, run git status --(returns MODIFIED FILES)
+      //git add . (to commit all modified)
+      //git commit -m "message (commit changes)
+      //git push  --> pushes it to GitHub
+//Now run cmd: heroku create (needs to be executed from INSIDE app)
+    // will make a real new application in our heroku webapp
+    //will add a new heroku remote that points to heroku git repository
+// run cmd: git push heroku
+    // heroku open (you now have a heroku-appointed url)
+    //https://shrouded-headland-15611.herokuapp.com/about
